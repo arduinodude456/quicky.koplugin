@@ -246,7 +246,7 @@ end
   end
   -- 1. DRUCKSKALIERUNG (Neu)
   -- Kobo liefert Werte bis ca. 4095. Wir rechnen das in eine sinnvolle Pixelbreite um (z.B. 2 bis 8 Pixel).
-  local raw_pressure = 10-- InputListener:pressureV() 
+  local raw_pressure = InputListener:pressureV() 
   local min_brush = 2 -- PEN_BRUSH_SIZE             -- Deine Standardbreite (z.B. 2)
   local max_extra_brush = 100                    -- Wie viel dicker der Stift maximal werden darf
   local dynamic_brush_size = min_brush + math.floor((raw_pressure / 4095) * max_extra_brush)
