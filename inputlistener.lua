@@ -269,6 +269,14 @@ function InputListener:eventAdjustmentHook(input, event, hook_params)
     if event.code == mtCodes.ABS_MT_TRACKING_ID then
       self.current_tracking_id = event.value
     end
+logger.dbg(
+    "STYLUS EVENT type=" ..
+    tostring(event.type) ..
+    " code=" ..
+    tostring(event.code) ..
+    " value=" ..
+    tostring(event.value)
+)
 
     if event.code == mtCodes.KOBO_STYLUS_ERASER and event.value == 1 then
       logger.dbg("NW: Setting subtool as Eraser")
