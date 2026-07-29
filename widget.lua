@@ -268,7 +268,7 @@ end
   end
   if tEvent.type == InputListener.TouchEventType.PEN_DOWN then
     self.penColor = PEN_COLOR
-    self.brushSize = PEN_BRUSH_SIZE 
+    self.brushSize = raw_pressure
     -- self.brushSize = PEN_BRUSH_SIZE
     -- self.brushSize = InputListener:pressureV()
 else
